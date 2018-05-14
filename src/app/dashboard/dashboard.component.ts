@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { EmployeeService } from '../employee.service';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private employeeService:EmployeeService) {
+    this.getUser()
+   }
 
   ngOnInit() {
+    
+  }
+  getUser(){
+    this.employeeService.getCurrentEmployee().subscribe((response)=>{
+      console.log(response);
+    })
   }
 
 }
