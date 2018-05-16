@@ -1,0 +1,79 @@
+<div class="topnav">
+  <a class="active"  routerLink="/dashboard">Home</a>
+ 
+</div>
+<h1>Employee Information</h1>
+
+<table >
+  <tr>
+    <th>Firt Name</th>
+  </tr>
+  <tr>
+    <td>{{selectedEmployee.user.first_name}}</td>
+  </tr>
+
+  <tr>
+    <th>Last Name</th>
+  </tr>
+  <tr>
+    <td>{{selectedEmployee.user.last_name}}</td>
+  </tr>
+
+  <tr>
+    <th>Email</th>
+  </tr>
+  <tr>
+    <td>{{selectedEmployee.user.email}}</td>
+  </tr>
+
+  <tr>
+    <th>Phone Number</th>
+  </tr>
+  <tr>
+    <td>{{selectedEmployee.phone_number}}</td>
+  </tr>
+
+  <tr>
+    <th>Position</th>
+  </tr>
+  <tr>
+    <td>{{selectedEmployee.position.name}}</td>
+  </tr>
+
+  <tr>
+    <th>Level</th>
+  </tr>
+  <tr>
+    <td>{{selectedEmployee.position.level}}</td>
+  </tr>
+<tr><td></td></tr>
+  
+  <tr>
+    <th>Other Info</th>
+  </tr>
+  <tr>
+    <th>Race</th>
+    <td>{{selectedEmployee.race}}</td>
+  </tr>
+  <tr>
+    <th>Age</th>
+    <td>{{selectedEmployee.age}}</td>
+  </tr>
+  <tr>
+  <th>Gender</th>
+    <td>{{selectedEmployee.gender}}</td>
+  </tr>
+  <tr>
+    <th>Birth Day</th>
+    <td>{{selectedEmployee.birth_date}}</td>
+  </tr>
+  <tr>
+    <th>Github User</th>
+    <td>{{selectedEmployee.github_user}}</td>
+  </tr>
+  <tr>
+    <th>Years Worked</th>
+    <td>{{selectedEmployee.years_worked}}</td>
+  </tr>
+</table>
+

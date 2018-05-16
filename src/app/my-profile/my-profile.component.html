@@ -1,0 +1,135 @@
+<div class="topnav">
+  <a class="active"  routerLink="/dashboard">Home</a>
+ <button class="button" (click)="logout()">Log Out</button>
+</div>
+<h1>Profile</h1>
+
+<table class="tables" >
+  <table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>ID Number</th>
+    <th>Birth Date</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Race</th>
+    <th>Physical Adress</th>
+  </tr>
+
+  <tr>
+    <td>{{currentUser.user.first_name}}</td>
+    <td>{{currentUser.user.last_name}}</td>
+    <td>{{currentUser.id_number}}</td>
+    <td>{{currentUser.birth_date}}</td>
+    <td>{{currentUser.age}}</td>
+    <td>{{currentUser.gender}}</td>
+    <td>{{currentUser.race}}</td>
+    <td>{{currentUser.physical_address}}</td>
+  </tr>
+
+  </table>
+<tr><td></td></tr>
+  <table>
+  <tr>
+    <th>Contacts</th>
+  </tr>
+  <div class="details">
+  <tr>
+    <th>Phone Number</th>
+    <td>{{currentUser.phone_number}}</td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td>{{currentUser.email}}</td>
+  </tr>
+  <tr>
+  <th>Personl Email</th>
+    <td>{{currentUser.personal_email}}</td>
+  </tr>
+  <tr>
+    <th>Github User</th>
+    <td>{{currentUser.github_user}}</td>
+  </tr>
+
+  </div>
+<br>
+  </table>
+  <table>
+<table *ngFor="let nextK of currentUser.employee_next_of_kin">
+<tr>
+  <th>Next of Kin</th>
+</tr>
+<div class="details">
+<tr>
+  <th>Name</th>
+  <td>{{nextK.name}}</td>
+</tr>
+<tr>
+<th>Relationship</th>
+  <td>{{nextK.relationship}}</td>
+</tr>
+<tr>
+  <th>Phone Number</th>
+  <td>{{nextK.phone_number}}</td>
+</tr>
+<tr>
+  <th>Email</th>
+  <td>{{nextK.email}}</td>
+</tr>
+<tr>
+  <th>Physical Address<Address></Address></th>
+  <td>{{nextK.physical_address}}</td>
+</tr>
+<tr></tr>
+
+</div>
+</table>
+<br>
+<table>
+  <tr>
+    <th>Employment Information</th>
+  </tr>
+  <tr>
+      <th>Position</th>
+      <th>Level</th>
+      <th>Start Date</th>
+      <th>Tax Number</th>
+      <th>Years Worked</th>
+    </tr>
+    <tr>
+        <td>{{currentUser.position.name}}</td>
+        <td>{{currentUser.position.level}}</td>
+        <td>{{currentUser.start_date}}</td>
+        <td>{{currentUser.tax_number}}</td>
+        <td>{{currentUser.years_worked}}</td>
+    </tr>
+</table>
+<table>
+  <tr>
+    <th>Review</th>
+  </tr>
+  <tr>
+      <th>Date</th>
+      <th>Employee Review Types</th>
+      <th>Salary</th>
+    
+    </tr>
+    <tr *ngFor="let review of currentUser.employee_review">
+        <td>{{review.date}}</td>
+        <td>{{review.type}}</td>
+        <td>{{review.salary}}</td>
+       
+    </tr>
+    <tr>
+      <th>Next Review</th>
+      <th>Leave Remaining</th>
+    </tr>
+    <tr>
+      <td>{{currentUser.next_review}}</td>
+      <td>{{currentUser.leave_remaining}}</td>
+    </tr>
+</table>
+</table>
+</table>
+

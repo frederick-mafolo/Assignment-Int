@@ -1,10 +1,10 @@
-<form name="form" (ngSubmit)="login()" #f="ngForm" novalidate>
+<form class="modal-content" name="form" (ngSubmit)="login()" #f="ngForm" novalidate>
 
   <div class="container">
     <label for="username">
       <b>Username</b>
     </label>
-    <input type="text" [(ngModel)]="username"  name="username"  required="" placeholder="Enter Username" required>
+    <input type="text" [(ngModel)]="username"  name="username"  placeholder="Enter Username" required>
 
     <label for="password">
       <b>Password</b>

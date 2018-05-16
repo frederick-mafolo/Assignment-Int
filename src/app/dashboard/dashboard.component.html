@@ -1,3 +1,34 @@
-<p>
-  dashboard works!
-</p>
+
+<div class="topnav">
+  <a class="active"  routerLink="/dashboard">Home</a>
+  <a  routerLink="/myprofile">My Profile</a>
+  <a  routerLink="/stats">Statistics</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+<table>
+  <tr>
+    <th>Firt Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Phone #</th>
+    <th>Position</th>
+    <th>Level</th>
+  </tr>
+  <tr *ngFor="let em of employees" (click)="viewEmployee(em)">
+    <td>{{em.user.first_name}}</td>
+    <td>{{em.user.last_name}}</td>
+    <td>{{em.user.email}}</td>
+    <td>{{em.phone_number}}</td>
+    <td>{{em.position.name}}</td>
+    <td>{{em.position.level}}</td>
+   
+  </tr>
+
+</table>
+
